@@ -1,0 +1,135 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+		$('.inputs').bind('click',function() {
+			var status = $(this).text();
+			status = status == 0 ? 1 : 0;
+			$(this).text(status);
+		});
+		$('.btn-nextstate').bind('click',function() {
+			app.do();
+		});
+		$('.btn-setall').bind('click',function() {
+			$('.inputs').text('1');
+		});
+		$('.btn-unsetall').bind('click',function() {
+			$('.inputs').text('0');
+		});
+	});
+	</script>
+	<style type="text/css">
+	.inputs {
+		font-size: 28px;
+		width: 50px;
+		text-align: center;
+		padding: 10px;
+		background: #ccc;
+		cursor: pointer;
+	}
+	</style>
+</head>
+
+<body>
+	<h1>Game of Life - A JavaScript Implementation</h1>
+	<table>
+		<tr>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >1</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >1</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >1</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >1</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >1</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+			<td>
+				<div type="number" class="inputs" >0</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5">
+				<button type="button" class="btn-nextstate" >Next State</button>
+				<button type="button" class="btn-setall" >Set All</button>
+				<button type="button" class="btn-unsetall" >Unset All</button>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>
